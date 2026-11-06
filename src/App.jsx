@@ -4,7 +4,7 @@ import Hero from './components/Hero';
 import Categories from './components/Categories';
 import ClubSection from './components/ClubSection';
 import ProductCatalog from './components/ProductCatalog';
-import BudgetModal from './components/CartModal'; // Reutilizamos el archivo renombrado o importado
+import BudgetModal from './components/BudgetModal'; // Reutilizamos el archivo renombrado o importado
 import Footer from './components/Footer';
 
 export default function App() {
