@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -52,7 +52,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:opacity-90 text-white text-xs font-bold px-4 py-2.5 rounded-lg transition-opacity"
           >
-            <Instagram className="w-4 h-4" />
+            <ExternalLink className="w-4 h-4" />
             <span>@lefaindumentaria</span>
           </a>
         </div>
