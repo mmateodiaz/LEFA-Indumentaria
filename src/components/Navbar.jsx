@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Phone, Instagram } from 'lucide-react';
+import { Menu, X, Phone, ExternalLink } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +41,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="hidden sm:flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:opacity-90 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-opacity shadow-sm"
           >
-            <Instagram className="w-4 h-4" />
+            <ExternalLink className="w-4 h-4" />
             <span>Instagram</span>
           </a>
 
@@ -79,7 +79,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-bold py-3 rounded-lg"
             >
-              <Instagram className="w-4 h-4" />
+              <ExternalLink className="w-4 h-4" />
               <span>Instagram</span>
             </a>
             <a 
