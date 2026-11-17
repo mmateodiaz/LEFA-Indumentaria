@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ClubSection from './components/ClubSection';
+import BudgetWizard from './components/BudgetWizard';
 import Footer from './components/Footer';
 import { Phone, Shirt, Snowflake, Award, ExternalLink } from 'lucide-react';
 
@@ -70,12 +71,10 @@ export default function App() {
                   Diseños sublimados personalizados con los colores y escudos de tu institución. Telas técnicas respirables de alta durabilidad.
                 </p>
                 <a 
-                  href="https://wa.me/5493510000000?text=Hola%20LEFA,%20quiero%20consultar%20por%20camisetas%20y%20kits%20de%20partido." 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                  href="#presupuesto" 
                   className="mt-auto text-xs font-bold text-blue-600 hover:underline"
                 >
-                  Consultar por WhatsApp &rarr;
+                  Pedir Presupuesto &rarr;
                 </a>
               </div>
 
@@ -88,12 +87,10 @@ export default function App() {
                   Buzos de entrenamiento, camperas cortavientos y conjuntos térmicos afrizados para proteger al plantel en los días fríos.
                 </p>
                 <a 
-                  href="https://wa.me/5493510000000?text=Hola%20LEFA,%20quiero%20consultar%20por%20ropa%20de%20invierno." 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                  href="#presupuesto" 
                   className="mt-auto text-xs font-bold text-blue-600 hover:underline"
                 >
-                  Consultar por WhatsApp &rarr;
+                  Pedir Presupuesto &rarr;
                 </a>
               </div>
 
@@ -106,12 +103,10 @@ export default function App() {
                   Shorts, medias técnicas y chombas institucionales para cuerpo técnico, dirigentes y momentos fuera de la cancha.
                 </p>
                 <a 
-                  href="https://wa.me/5493510000000?text=Hola%20LEFA,%20quiero%20consultar%20por%20accesorios%20y%20tercer%20tiempo." 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                  href="#presupuesto" 
                   className="mt-auto text-xs font-bold text-blue-600 hover:underline"
                 >
-                  Consultar por WhatsApp &rarr;
+                  Pedir Presupuesto &rarr;
                 </a>
               </div>
 
@@ -120,6 +115,8 @@ export default function App() {
         </section>
 
         <ClubSection />
+
+        <BudgetWizard />
       </main>
 
       <Footer />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
+import { Phone, Mail, MapPin, ExternalLink, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -20,17 +20,17 @@ export default function Footer() {
           <ul className="space-y-2 text-xs text-gray-300">
             <li><a href="#" className="hover:text-white">Inicio</a></li>
             <li><a href="#quienes-somos" className="hover:text-white">Quiénes Somos</a></li>
-            <li><a href="#productos" className="hover:text-white">Catálogo</a></li>
-            <li><a href="#clubes" className="hover:text-white">Asesoramiento a Clubes</a></li>
+            <li><a href="#clubes" className="hover:text-white">Clubes y Equipos</a></li>
+            <li><a href="#presupuesto" className="hover:text-white">Simulador de Presupuesto</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 className="text-sm font-bold uppercase tracking-wider mb-4 text-blue-400">Contacto</h4>
+          <h4 className="text-sm font-bold uppercase tracking-wider mb-4 text-blue-400">Contacto Directo</h4>
           <ul className="space-y-3 text-xs text-gray-300">
             <li className="flex items-center gap-2">
-              <Phone className="w-4 h-4 text-blue-500" />
-              <span>+54 9 351 000-0000</span>
+              <Phone className="w-4 h-4 text-green-500" />
+              <span>+54 3543 60-9577</span>
             </li>
             <li className="flex items-center gap-2">
               <Mail className="w-4 h-4 text-blue-500" />
@@ -44,17 +44,27 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-sm font-bold uppercase tracking-wider mb-4 text-blue-400">Redes Sociales</h4>
-          <p className="text-xs text-gray-400 mb-4">Seguinos en nuestro Instagram oficial para ver todos los trabajos realizados.</p>
-          <a 
-            href="https://www.instagram.com/lefaindumentaria" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:opacity-90 text-white text-xs font-bold px-4 py-2.5 rounded-lg transition-opacity"
-          >
-            <ExternalLink className="w-4 h-4" />
-            <span>@lefaindumentaria</span>
-          </a>
+          <h4 className="text-sm font-bold uppercase tracking-wider mb-4 text-blue-400">Canales Oficiales</h4>
+          <div className="flex flex-col gap-3">
+            <a 
+              href="https://wa.me/5493543609577?text=Hola%20LEFA,%20quiero%20consultar%20por%20indumentaria." 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white text-xs font-bold px-4 py-3 rounded-xl transition-colors shadow-md"
+            >
+              <MessageCircle className="w-4 h-4" />
+              <span>Escribir por WhatsApp</span>
+            </a>
+            <a 
+              href="https://www.instagram.com/lefaindumentaria" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:opacity-90 text-white text-xs font-bold px-4 py-3 rounded-xl transition-opacity shadow-sm"
+            >
+              <ExternalLink className="w-4 h-4" />
+              <span>Seguinos en Instagram</span>
+            </a>
+          </div>
         </div>
 
       </div>

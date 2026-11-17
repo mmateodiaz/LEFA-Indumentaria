@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, X, Phone, ExternalLink } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,39 +30,27 @@ export default function Navbar() {
           <a href="#" className="hover:text-blue-600 transition-colors">Inicio</a>
           <a href="#quienes-somos" className="hover:text-blue-600 transition-colors">Quiénes Somos</a>
           <a href="#clubes" className="hover:text-blue-600 transition-colors">Clubes y Equipos</a>
+          <a href="#presupuesto" className="hover:text-blue-600 transition-colors">Presupuesto</a>
           <a href="#contacto" className="hover:text-blue-600 transition-colors">Contacto</a>
         </nav>
 
-        {/* Acciones derecha (Instagram + WhatsApp) */}
-        <div className="flex items-center gap-3">
+        {/* CTA Presupuesto superior */}
+        <div className="hidden sm:block">
           <a 
-            href="https://www.instagram.com/lefaindumentaria" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="hidden sm:flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:opacity-90 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-opacity shadow-sm"
+            href="#presupuesto" 
+            className="bg-gray-900 hover:bg-blue-600 text-white font-bold text-xs uppercase px-5 py-3 rounded-xl transition-colors shadow-sm"
           >
-            <ExternalLink className="w-4 h-4" />
-            <span>Instagram</span>
+            Pedir Presupuesto
           </a>
-
-          <a 
-            href="https://wa.me/5493543609577?text=Hola%20LEFA,%20quiero%20consultar%20por%20indumentaria%20para%20mi%20club." 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-colors shadow-md"
-          >
-            <Phone className="w-4 h-4" />
-            <span>WhatsApp</span>
-          </a>
-
-          {/* Botón menú hamburguesa mobile */}
-          <button 
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
         </div>
+
+        {/* Botón menú hamburguesa mobile */}
+        <button 
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100"
+        >
+          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
       </div>
 
       {/* Menú desplegable mobile */}
@@ -71,27 +59,8 @@ export default function Navbar() {
           <a href="#" onClick={() => setIsOpen(false)} className="block py-2 text-gray-800 font-medium">Inicio</a>
           <a href="#quienes-somos" onClick={() => setIsOpen(false)} className="block py-2 text-gray-800 font-medium">Quiénes Somos</a>
           <a href="#clubes" onClick={() => setIsOpen(false)} className="block py-2 text-gray-800 font-medium">Clubes y Equipos</a>
+          <a href="#presupuesto" onClick={() => setIsOpen(false)} className="block py-2 text-gray-800 font-medium">Presupuesto</a>
           <a href="#contacto" onClick={() => setIsOpen(false)} className="block py-2 text-gray-800 font-medium">Contacto</a>
-          <div className="flex gap-2 pt-2">
-            <a 
-              href="https://www.instagram.com/lefaindumentaria" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs font-bold py-3 rounded-lg"
-            >
-              <ExternalLink className="w-4 h-4" />
-              <span>Instagram</span>
-            </a>
-            <a 
-              href="https://wa.me/5493510000000" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 bg-green-600 text-white text-xs font-bold py-3 rounded-lg"
-            >
-              <Phone className="w-4 h-4" />
-              <span>WhatsApp</span>
-            </a>
-          </div>
         </div>
       )}
     </header>
