@@ -1,20 +1,81 @@
-import React from 'react';
-import { ShieldCheck, Trophy, Truck, MessageCircle } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { ShieldCheck, Trophy, Truck, MessageCircle, ChevronLeft, ChevronRight } from 'lucide-react';
+
+const heroImages = [
+  {
+    url: '/hero-1.jpg',
+    alt: 'LEFA Indumentaria - Fútbol en cancha'
+  },
+  {
+    url: '/hero-2.jpg',
+    alt: 'LEFA Indumentaria - Conjuntos deportivos'
+  },
+  {
+    url: '/hero-3.jpg',
+    alt: 'LEFA Indumentaria - Jugador con camiseta oficial'
+  }
+];
 
 export default function Hero() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Cambiar de foto automáticamente cada 5 segundos (opcional, o solo con flechas)
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? heroImages.length - 1 : prevIndex - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+  };
+
   return (
-    <div className="relative bg-gray-900 text-white overflow-hidden">
-      {/* Imagen de fondo con overlay oscuro */}
+    <div className="relative bg-gray-900 text-white overflow-hidden min-h-[580px] flex flex-col justify-between">
+      
+      {/* Carrusel de Imágenes de Fondo */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&q=80&w=1920" 
-          alt="LEFA Indumentaria Deportiva" 
-          className="w-full h-full object-cover object-center opacity-40 scale-105 transform hover:scale-100 transition-transform duration-1000"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-900/80 to-transparent"></div>
+        {heroImages.map((img, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+              index === currentIndex ? 'opacity-50 scale-100' : 'opacity-0 scale-105 pointer-events-none'
+            }`}
+          >
+            <img 
+              src={img.url} 
+              alt={img.alt} 
+              className="w-full h-full object-cover object-center"
+            />
+          </div>
+        ))}
+        {/* Overlay oscuro para legibilidad del texto */}
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-900/70 to-transparent"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 flex flex-col items-start justify-center min-h-[580px]">
+      {/* Flechas de Navegación del Carrusel */}
+      <button 
+        onClick={handlePrev}
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/70 text-white p-3 rounded-full backdrop-blur-md transition-colors border border-white/10 hidden sm:flex items-center justify-center"
+        aria-label="Foto anterior"
+      >
+        <ChevronLeft className="w-6 h-6" />
+      </button>
+      <button 
+        onClick={handleNext}
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/40 hover:bg-black/70 text-white p-3 rounded-full backdrop-blur-md transition-colors border border-white/10 hidden sm:flex items-center justify-center"
+        aria-label="Siguiente foto"
+      >
+        <ChevronRight className="w-6 h-6" />
+      </button>
+
+      {/* Contenido Central del Hero */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 flex flex-col items-start justify-center flex-grow w-full">
         <span className="bg-blue-600 text-white text-xs font-bold tracking-widest uppercase px-3 py-1.5 rounded mb-4">
           Indumentaria Oficial para Clubes
         </span>
@@ -29,7 +90,7 @@ export default function Hero() {
         
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
           <a 
-            href="https://wa.me/5493510000000?text=Hola%20LEFA,%20quiero%20pedir%20presupuesto%20para%20mi%20equipo." 
+            href="https://wa.me/5493543609577?text=Hola%20LEFA,%20quiero%20pedir%20presupuesto%20para%20mi%20equipo." 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg text-sm uppercase"
@@ -38,11 +99,23 @@ export default function Hero() {
             <span>Consultar por WhatsApp</span>
           </a>
           <a 
-            href="#clubes" 
+            href="#como-pedir" 
             className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-4 rounded-xl backdrop-blur-md transition-all border border-white/20 text-sm uppercase"
           >
-            <span>Ver Líneas de Trabajo</span>
+            <span>Ver Cómo Pedir</span>
           </a>
+        </div>
+
+        {/* Indicadores de puntos (dots) para saber en qué foto estás */}
+        <div className="flex gap-2 mt-8">
+          {heroImages.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentIndex(idx)}
+              className={`h-2 rounded-full transition-all ${idx === currentIndex ? 'w-8 bg-blue-500' : 'w-2 bg-white/40'}`}
+              aria-label={`Ir a diapositiva ${idx + 1}`}
+            />
+          ))}
         </div>
       </div>
 
@@ -72,6 +145,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
     </div>
   );
 }
