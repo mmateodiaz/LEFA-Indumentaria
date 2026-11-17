@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import ClubSection from './components/ClubSection';
+import HowToOrder from './components/HowToOrder';
 import BudgetWizard from './components/BudgetWizard';
 import Footer from './components/Footer';
 import { Phone, Shirt, Snowflake, Award, ExternalLink } from 'lucide-react';
@@ -114,8 +114,10 @@ export default function App() {
           </div>
         </section>
 
-        <ClubSection />
+        {/* Sección Como Hacer tu Pedido */}
+        <HowToOrder />
 
+        {/* Simulador de Presupuesto en 3 pasos */}
         <BudgetWizard />
       </main>
 
