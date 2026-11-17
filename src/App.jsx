@@ -5,7 +5,7 @@ import HowToOrder from './components/HowToOrder';
 import BudgetWizard from './components/BudgetWizard';
 import Footer from './components/Footer';
 import ScrollAnimation from './components/ScrollAnimation';
-import { Shirt, Snowflake, Briefcase, Users, ExternalLink } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 
 export default function App() {
   return (
@@ -15,12 +15,12 @@ export default function App() {
       <main>
         <Hero />
 
-        {/* Sección Quiénes Somos (Texto descriptivo + los 4 cuadros en lugar de las fotos) */}
+        {/* Sección Quiénes Somos y los 4 Grandes Cuadros con Fotos Reales */}
         <ScrollAnimation>
           <section id="quienes-somos" className="py-24 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               
-              {/* Bloque superior de texto institucional */}
+              {/* Texto institucional */}
               <div className="max-w-3xl mx-auto text-center mb-16">
                 <span className="text-blue-600 font-bold text-xs uppercase tracking-widest">Sobre LEFA</span>
                 <h2 className="text-3xl sm:text-4xl font-black uppercase tracking-tight text-gray-900 mt-1 mb-6">
@@ -45,64 +45,116 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Los 4 Cuadros de Líneas (reemplazando las fotos anteriores) */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-8 border-t border-gray-100">
+              {/* Los 4 Grandes Cuadros con Imágenes de Fondo */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pt-8 border-t border-gray-100">
                 
-                {/* Cuadro 1 */}
-                <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-4 shadow-sm">
-                    <Shirt className="w-6 h-6" />
+                {/* Cuadro 1: Juegos de Fútbol */}
+                <a 
+                  href="#presupuesto"
+                  className="group relative h-96 rounded-3xl overflow-hidden shadow-lg flex flex-col justify-end p-6 border border-white/10 transition-transform duration-300 hover:-translate-y-2"
+                >
+                  <div className="absolute inset-0 z-0">
+                    <img 
+                      src="/EquipoFutbol.png" 
+                      alt="Juegos de fútbol" 
+                      className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
                   </div>
-                  <h3 className="text-base font-bold text-gray-900 mb-2">Juegos de fútbol</h3>
-                  <p className="text-gray-600 text-xs leading-relaxed mb-4">
-                    Camisetas y shorts personalizados con los colores y escudos de tu institución.
-                  </p>
-                  <a href="#presupuesto" className="mt-auto text-xs font-bold text-blue-600 hover:underline">
-                    Pedir Presupuesto &rarr;
-                  </a>
-                </div>
+                  <div className="relative z-10">
+                    <span className="bg-blue-600 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md mb-2 inline-block">
+                      Línea Oficial
+                    </span>
+                    <h3 className="text-xl font-black text-white uppercase mb-2">Juegos de fútbol</h3>
+                    <p className="text-gray-300 text-xs leading-relaxed mb-4">
+                      Camisetas y shorts personalizados con los colores y escudos de tu institución.
+                    </p>
+                    <span className="text-xs font-bold text-blue-400 group-hover:underline">
+                      Pedir Presupuesto &rarr;
+                    </span>
+                  </div>
+                </a>
 
-                {/* Cuadro 2 */}
-                <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-4 shadow-sm">
-                    <Snowflake className="w-6 h-6" />
+                {/* Cuadro 2: Equipos de Invierno */}
+                <a 
+                  href="#presupuesto"
+                  className="group relative h-96 rounded-3xl overflow-hidden shadow-lg flex flex-col justify-end p-6 border border-white/10 transition-transform duration-300 hover:-translate-y-2"
+                >
+                  <div className="absolute inset-0 z-0">
+                    <img 
+                      src="/EquipoInvierno.png" 
+                      alt="Equipos de invierno" 
+                      className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
                   </div>
-                  <h3 className="text-base font-bold text-gray-900 mb-2">Equipos de invierno</h3>
-                  <p className="text-gray-600 text-xs leading-relaxed mb-4">
-                    Buzos, camperas y conjuntos térmicos afrizados para proteger al plantel en los días fríos.
-                  </p>
-                  <a href="#presupuesto" className="mt-auto text-xs font-bold text-blue-600 hover:underline">
-                    Pedir Presupuesto &rarr;
-                  </a>
-                </div>
+                  <div className="relative z-10">
+                    <span className="bg-blue-600 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md mb-2 inline-block">
+                      Térmicos y Abrigo
+                    </span>
+                    <h3 className="text-xl font-black text-white uppercase mb-2">Equipos de invierno</h3>
+                    <p className="text-gray-300 text-xs leading-relaxed mb-4">
+                      Buzos, camperas y conjuntos afrizados para proteger al plantel en los días fríos.
+                    </p>
+                    <span className="text-xs font-bold text-blue-400 group-hover:underline">
+                      Pedir Presupuesto &rarr;
+                    </span>
+                  </div>
+                </a>
 
-                {/* Cuadro 3 */}
-                <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-4 shadow-sm">
-                    <Briefcase className="w-6 h-6" />
+                {/* Cuadro 3: Ropa Institucional */}
+                <a 
+                  href="#presupuesto"
+                  className="group relative h-96 rounded-3xl overflow-hidden shadow-lg flex flex-col justify-end p-6 border border-white/10 transition-transform duration-300 hover:-translate-y-2"
+                >
+                  <div className="absolute inset-0 z-0">
+                    <img 
+                      src="/RopaInstitucional.png" 
+                      alt="Ropa institucional" 
+                      className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
                   </div>
-                  <h3 className="text-base font-bold text-gray-900 mb-2">Ropa institucional</h3>
-                  <p className="text-gray-600 text-xs leading-relaxed mb-4">
-                    Chombas y prendas formales para cuerpo técnico, dirigentes y presentación.
-                  </p>
-                  <a href="#presupuesto" className="mt-auto text-xs font-bold text-blue-600 hover:underline">
-                    Pedir Presupuesto &rarr;
-                  </a>
-                </div>
+                  <div className="relative z-10">
+                    <span className="bg-blue-600 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md mb-2 inline-block">
+                      Staff y Dirigentes
+                    </span>
+                    <h3 className="text-xl font-black text-white uppercase mb-2">Ropa institucional</h3>
+                    <p className="text-gray-300 text-xs leading-relaxed mb-4">
+                      Chombas y prendas formales para cuerpo técnico, dirigentes y presentación.
+                    </p>
+                    <span className="text-xs font-bold text-blue-400 group-hover:underline">
+                      Pedir Presupuesto &rarr;
+                    </span>
+                  </div>
+                </a>
 
-                {/* Cuadro 4 */}
-                <div className="bg-gray-50 p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-4 shadow-sm">
-                    <Users className="w-6 h-6" />
+                {/* Cuadro 4: Equipos de 3er Tiempo */}
+                <a 
+                  href="#presupuesto"
+                  className="group relative h-96 rounded-3xl overflow-hidden shadow-lg flex flex-col justify-end p-6 border border-white/10 transition-transform duration-300 hover:-translate-y-2"
+                >
+                  <div className="absolute inset-0 z-0">
+                    <img 
+                      src="/TercerTiempo.png" 
+                      alt="Equipos de 3er tiempo" 
+                      className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700" 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent"></div>
                   </div>
-                  <h3 className="text-base font-bold text-gray-900 mb-2">Equipos de 3er tiempo</h3>
-                  <p className="text-gray-600 text-xs leading-relaxed mb-4">
-                    Indumentaria cómoda y casual diseñada especialmente para momentos fuera de la cancha.
-                  </p>
-                  <a href="#presupuesto" className="mt-auto text-xs font-bold text-blue-600 hover:underline">
-                    Pedir Presupuesto &rarr;
-                  </a>
-                </div>
+                  <div className="relative z-10">
+                    <span className="bg-blue-600 text-white text-[10px] font-bold uppercase px-2.5 py-1 rounded-md mb-2 inline-block">
+                      Casual y Relax
+                    </span>
+                    <h3 className="text-xl font-black text-white uppercase mb-2">Equipos de 3er tiempo</h3>
+                    <p className="text-gray-300 text-xs leading-relaxed mb-4">
+                      Indumentaria cómoda y casual diseñada especialmente para momentos fuera de la cancha.
+                    </p>
+                    <span className="text-xs font-bold text-blue-400 group-hover:underline">
+                      Pedir Presupuesto &rarr;
+                    </span>
+                  </div>
+                </a>
 
               </div>
 
