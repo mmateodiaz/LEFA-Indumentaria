@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ClubSection from './components/ClubSection';
 import Footer from './components/Footer';
-import { Instagram, Phone, Shirt, Snowflake, Award } from 'lucide-react';
+import { Phone, Shirt, Snowflake, Award, ExternalLink } from 'lucide-react';
 
 export default function App() {
   return (
@@ -35,7 +35,7 @@ export default function App() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-xs uppercase px-5 py-3 rounded-xl shadow-md"
                   >
-                    <Instagram className="w-4 h-4" />
+                    <ExternalLink className="w-4 h-4" />
                     <span>Ver Trabajos en Instagram</span>
                   </a>
                 </div>
@@ -48,7 +48,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Líneas de Indumentaria (Reemplazo del Catálogo) */}
+        {/* Líneas de Indumentaria */}
         <section className="py-20 bg-gray-50 border-y border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-16">
