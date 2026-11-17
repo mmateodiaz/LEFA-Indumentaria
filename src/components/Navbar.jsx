@@ -46,7 +46,7 @@ export default function Navbar() {
           </a>
 
           <a 
-            href="https://wa.me/5493510000000?text=Hola%20LEFA,%20quiero%20consultar%20por%20indumentaria%20para%20mi%20club." 
+            href="https://wa.me/5493543609577?text=Hola%20LEFA,%20quiero%20consultar%20por%20indumentaria%20para%20mi%20club." 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-colors shadow-md"
