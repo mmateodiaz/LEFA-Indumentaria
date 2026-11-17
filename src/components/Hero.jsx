@@ -2,18 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { ShieldCheck, Trophy, Truck, MessageCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const heroImages = [
-  {
-    url: '/hero-1.jpg',
-    alt: 'LEFA Indumentaria'
-  },
-  {
-    url: '/hero-2.jpg',
-    alt: 'LEFA Indumentaria'
-  },
-  {
-    url: '/hero-3.jpg',
-    alt: 'LEFA Indumentaria'
-  }
+  { url: '/hero-1.jpg', alt: 'LEFA Indumentaria' },
+  { url: '/hero-2.jpg', alt: 'LEFA Indumentaria' },
+  { url: '/hero-3.jpg', alt: 'LEFA Indumentaria' }
 ];
 
 export default function Hero() {
@@ -46,11 +37,7 @@ export default function Hero() {
               index === currentIndex ? 'opacity-50 scale-100' : 'opacity-0 scale-105 pointer-events-none'
             }`}
           >
-            <img 
-              src={img.url} 
-              alt={img.alt} 
-              className="w-full h-full object-cover object-center"
-            />
+            <img src={img.url} alt={img.alt} className="w-full h-full object-cover object-center" />
           </div>
         ))}
         <div className="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-900/70 to-transparent"></div>
@@ -72,19 +59,15 @@ export default function Hero() {
         <ChevronRight className="w-6 h-6" />
       </button>
 
-      {/* Contenido Central del Hero simplificado */}
+      {/* Contenido Central del Hero */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 flex flex-col items-start justify-center flex-grow w-full">
         <span className="bg-blue-600 text-white text-xs font-bold tracking-widest uppercase px-3 py-1.5 rounded mb-4">
           Indumentaria deportiva para clubes y equipos
         </span>
         
-        <h1 className="text-4xl sm:text-6xl font-black tracking-tight max-w-2xl mb-4 leading-none">
-          VESTIMOS A TU PLANTEL <span className="con text-blue-500">con identidad</span>
+        <h1 className="text-4xl sm:text-6xl font-black tracking-tight max-w-2xl mb-8 leading-none uppercase">
+          Vestimos a tu plantel <span className="text-blue-500">con identidad</span>
         </h1>
-        
-        <p className="text-base sm:text-lg text-gray-300 max-w-lg mb-8 font-normal">
-          Camisetas oficiales, kits de entrenamiento y ropa para equipar a todo el club con la mejor calidad.
-        </p>
         
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
           <a 

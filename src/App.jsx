@@ -5,7 +5,7 @@ import HowToOrder from './components/HowToOrder';
 import BudgetWizard from './components/BudgetWizard';
 import Footer from './components/Footer';
 import ScrollAnimation from './components/ScrollAnimation';
-import { Shirt, Snowflake, Award, ExternalLink } from 'lucide-react';
+import { Shirt, Snowflake, Briefcase, Users, ExternalLink } from 'lucide-react';
 
 export default function App() {
   return (
@@ -52,7 +52,7 @@ export default function App() {
           </section>
         </ScrollAnimation>
 
-        {/* Líneas de Indumentaria con Animación */}
+        {/* 4 Cuadros de Líneas de Indumentaria */}
         <ScrollAnimation>
           <section className="py-20 bg-gray-50 border-y border-gray-100">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,52 +64,60 @@ export default function App() {
                 <div className="w-16 h-1 bg-blue-600 mx-auto"></div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 
-                <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
-                  <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                    <Shirt className="w-7 h-7" />
+                {/* Cuadro 1 */}
+                <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-4">
+                    <Shirt className="w-6 h-6" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Camisetas y Kits de Partido</h3>
-                  <p className="text-gray-600 text-xs leading-relaxed mb-6">
-                    Diseños sublimados personalizados con los colores y escudos de tu institución. Telas técnicas respirables de alta durabilidad.
+                  <h3 className="text-base font-bold text-gray-900 mb-2">Juegos de fútbol</h3>
+                  <p className="text-gray-600 text-xs leading-relaxed mb-4">
+                    Camisetas y shorts personalizados con los colores y escudos de tu institución.
                   </p>
-                  <a 
-                    href="#presupuesto" 
-                    className="mt-auto text-xs font-bold text-blue-600 hover:underline"
-                  >
+                  <a href="#presupuesto" className="mt-auto text-xs font-bold text-blue-600 hover:underline">
                     Pedir Presupuesto &rarr;
                   </a>
                 </div>
 
-                <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
-                  <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                    <Snowflake className="w-7 h-7" />
+                {/* Cuadro 2 */}
+                <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-4">
+                    <Snowflake className="w-6 h-6" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Indumentaria de Invierno</h3>
-                  <p className="text-gray-600 text-xs leading-relaxed mb-6">
-                    Buzos de entrenamiento, camperas cortavientos y conjuntos térmicos afrizados para proteger al plantel en los días fríos.
+                  <h3 className="text-base font-bold text-gray-900 mb-2">Equipos de invierno</h3>
+                  <p className="text-gray-600 text-xs leading-relaxed mb-4">
+                    Buzos, camperas y conjuntos térmicos afrizados para proteger al plantel en los días fríos.
                   </p>
-                  <a 
-                    href="#presupuesto" 
-                    className="mt-auto text-xs font-bold text-blue-600 hover:underline"
-                  >
+                  <a href="#presupuesto" className="mt-auto text-xs font-bold text-blue-600 hover:underline">
                     Pedir Presupuesto &rarr;
                   </a>
                 </div>
 
-                <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
-                  <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
-                    <Award className="w-7 h-7" />
+                {/* Cuadro 3 */}
+                <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-4">
+                    <Briefcase className="w-6 h-6" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">Accesorios y Tercer Tiempo</h3>
-                  <p className="text-gray-600 text-xs leading-relaxed mb-6">
-                    Shorts, medias técnicas y chombas institucionales para cuerpo técnico, dirigentes y momentos fuera de la cancha.
+                  <h3 className="text-base font-bold text-gray-900 mb-2">Ropa institucional</h3>
+                  <p className="text-gray-600 text-xs leading-relaxed mb-4">
+                    Chombas y prendas formales para cuerpo técnico, dirigentes y presentación.
                   </p>
-                  <a 
-                    href="#presupuesto" 
-                    className="mt-auto text-xs font-bold text-blue-600 hover:underline"
-                  >
+                  <a href="#presupuesto" className="mt-auto text-xs font-bold text-blue-600 hover:underline">
+                    Pedir Presupuesto &rarr;
+                  </a>
+                </div>
+
+                {/* Cuadro 4 */}
+                <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow">
+                  <div className="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-4">
+                    <Users className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-base font-bold text-gray-900 mb-2">Equipos de 3er tiempo</h3>
+                  <p className="text-gray-600 text-xs leading-relaxed mb-4">
+                    Indumentaria cómoda y casual diseñada especialmente para momentos fuera de la cancha.
+                  </p>
+                  <a href="#presupuesto" className="mt-auto text-xs font-bold text-blue-600 hover:underline">
                     Pedir Presupuesto &rarr;
                   </a>
                 </div>
