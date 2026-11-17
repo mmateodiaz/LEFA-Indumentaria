@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ShieldCheck, Trophy, Truck } from 'lucide-react';
+import { ShieldCheck, Trophy, Truck, MessageCircle } from 'lucide-react';
 
 export default function Hero() {
   return (
@@ -16,30 +16,32 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 flex flex-col items-start justify-center min-h-[580px]">
         <span className="bg-blue-600 text-white text-xs font-bold tracking-widest uppercase px-3 py-1.5 rounded mb-4">
-          Nueva Colección Oficial
+          Indumentaria Oficial para Clubes
         </span>
         
         <h1 className="text-4xl sm:text-6xl font-black tracking-tight max-w-2xl mb-6 leading-none">
-          INDUMENTARIA DEPORTIVA <span className="text-blue-500">para Clubes y Equipos</span>
+          DISEÑO Y RENDIMIENTO <span className="text-blue-500">para tu Equipo</span>
         </h1>
         
         <p className="text-lg text-gray-300 max-w-xl mb-8 font-normal">
-          Diseño, tecnología textil avanzada y máxima resistencia para potenciar el rendimiento dentro y fuera de la cancha.
+          Confección integral de indumentaria deportiva personalizada, camisetas oficiales y kits de entrenamiento de alta resistencia.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
           <a 
-            href="#productos" 
-            className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg"
+            href="https://wa.me/5493510000000?text=Hola%20LEFA,%20quiero%20pedir%20presupuesto%20para%20mi%20equipo." 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg text-sm uppercase"
           >
-            <span>Ver Catálogo</span>
-            <ArrowRight className="w-5 h-5" />
+            <MessageCircle className="w-5 h-5" />
+            <span>Consultar por WhatsApp</span>
           </a>
           <a 
             href="#clubes" 
-            className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-4 rounded-xl backdrop-blur-md transition-all border border-white/20"
+            className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold px-8 py-4 rounded-xl backdrop-blur-md transition-all border border-white/20 text-sm uppercase"
           >
-            <span>Asesoramiento para Clubes</span>
+            <span>Ver Líneas de Trabajo</span>
           </a>
         </div>
       </div>
